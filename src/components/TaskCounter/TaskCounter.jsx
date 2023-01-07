@@ -9,18 +9,21 @@ const TaskCounter = () => {
     (acc, tasks) => {
       if (tasks.completed) {
         acc.completed += 1;
+        acc.total += 1;
       } else {
+        acc.total += 1;
         acc.active += 1;
       }
       return acc;
     },
-    { active: 0, completed: 0 }
+    { active: 0, completed: 0, total: 0 }
   );
 
   return (
     <TaskContainer>
       <Text>Active: {count.active}</Text>
       <Text>Completed: {count.completed}</Text>
+      <Text>Total: {count.total}</Text>
     </TaskContainer>
   );
 };
