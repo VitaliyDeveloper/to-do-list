@@ -8,7 +8,7 @@ const Button = ({
   ...otherProps
 }) => {
   return (
-    <button
+    <Btn
       className={clsx(Btn, {
         [Btn.isSelected]: selected,
       })}
@@ -16,7 +16,7 @@ const Button = ({
       {...otherProps}
     >
       {children}
-    </button>
+    </Btn>
   );
 };
 

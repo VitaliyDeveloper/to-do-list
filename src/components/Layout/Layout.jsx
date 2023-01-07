@@ -1,5 +1,7 @@
+import { Main } from './Layout.styled';
+
 const Layout = ({ children }) => {
-  return <main>{children}</main>;
+  return <Main>{children}</Main>;
 };
 
 export default Layout;

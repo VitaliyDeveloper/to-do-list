@@ -1,14 +1,15 @@
 import Task from 'components/Task/Task';
+import { List, Item } from './TaskList.styled';
 
 const TaskList = () => {
   return (
-    <ul>
+    <List>
       {[].map(task => (
-        <li key={task.id}>
+        <Item key={task.id}>
           <Task task={task} />
-        </li>
+        </Item>
       ))}
-    </ul>
+    </List>
   );
 };
 

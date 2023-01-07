@@ -1,9 +1,11 @@
+import { Text, TaskContainer } from './TaskCounter.styled';
+
 const TaskCounter = () => {
   return (
-    <div>
-      <p>Active: 0</p>
-      <p>Completed: 0</p>
-    </div>
+    <TaskContainer>
+      <Text>Active: 0</Text>
+      <Text>Completed: 0</Text>
+    </TaskContainer>
   );
 };
 

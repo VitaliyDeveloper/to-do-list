@@ -1,4 +1,5 @@
 import Button from 'components/Button/Button';
+import { Form, Input } from './TaskForm.styled';
 
 const TaskForm = () => {
   const handleSubmit = e => {
@@ -8,12 +9,10 @@ const TaskForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        <input type="text" name="text" placeholder="Enter task text..." />
-        <Button type="submit">Add task</Button>
-      </label>
-    </form>
+    <Form onSubmit={handleSubmit}>
+      <Input type="text" name="text" placeholder="Enter task text..." />
+      <Button type="submit">Add task</Button>
+    </Form>
   );
 };
 

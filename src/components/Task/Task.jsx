@@ -1,14 +1,15 @@
 import { MdClose } from 'react-icons/md';
+import { Wrapper, Text, Btn, Checkbox } from './Task.styled';
 
 const Task = ({ task }) => {
   return (
-    <div>
-      <input type="checkbox" checked={task.completed} />
-      <p>{task.text}</p>
-      <button>
+    <Wrapper>
+      <Checkbox type="checkbox" checked={task.completed} />
+      <Text>{task.text}</Text>
+      <Btn>
         <MdClose size={24} />
-      </button>
-    </div>
+      </Btn>
+    </Wrapper>
   );
 };
 

@@ -1,12 +1,13 @@
 import Button from 'components/Button/Button';
+import { Wrapper } from './StatusFilter.styled';
 
 const StatusFilter = () => {
   return (
-    <div>
+    <Wrapper>
       <Button>All</Button>
       <Button>Active</Button>
       <Button>Completed</Button>
-    </div>
+    </Wrapper>
   );
 };
 

@@ -9,7 +9,7 @@ const AppBar = () => {
         <Title>Tasks</Title>
         <TaskCounter />
       </Section>
-      ;
+
       <Section>
         <Title>Filter by status</Title>
         <StatusFilter />
