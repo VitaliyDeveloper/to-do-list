@@ -22,10 +22,11 @@ export const Btn = styled.button`
   border-radius: 4px;
   background-color: transparent;
   cursor: pointer;
-  color: #f44336;
+  color: var(--dark-color);
 
   &:hover {
-    background-color: #e2e5e8;
+    background-color: var(--second-color);
+    color: var(--light-color);
   }
 
   &:active {

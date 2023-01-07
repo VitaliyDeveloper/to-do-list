@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { MdClose } from 'react-icons/md';
+import { FaTrashAlt } from 'react-icons/fa';
 import { deleteTask, toggleCompleted } from 'redux/actions';
 import { Wrapper, Text, Btn, Checkbox } from './Task.styled';
 
@@ -18,7 +18,7 @@ const Task = ({ task }) => {
       />
       <Text>{task.text}</Text>
       <Btn onClick={handleDelete}>
-        <MdClose size={24} />
+        <FaTrashAlt size={20} />
       </Btn>
     </Wrapper>
   );
