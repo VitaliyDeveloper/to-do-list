@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import { Notify } from 'notiflix';
 import { addTask } from 'redux/actions';
 import Button from 'components/Button/Button';
 import { Form, Input } from './TaskForm.styled';
@@ -9,7 +10,12 @@ const TaskForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
-    dispatch(addTask(form.elements.text.value));
+
+    if (form.elements.text.value.trim() === '') {
+      Notify.failure('Please enter a note...');
+      return;
+    }
+    dispatch(addTask(form.elements.text.value.trim()));
     form.reset();
   };
 
